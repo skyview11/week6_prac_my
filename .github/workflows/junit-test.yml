@@ -1,0 +1,23 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: 
+      - name: Set up JDK 21
+        uses: 
+        with: 
+          distribution: 'oracle'
+          java-version: '21'
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+      - name: Run tests with JUnit
+        run: ./gradlew test --no-daemon
